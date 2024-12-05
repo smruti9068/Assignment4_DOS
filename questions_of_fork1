@@ -1,0 +1,25 @@
+a) Run the program and trace the state of both processes:
+
+When running the program, you'll observe the following:
+
+    The parent and child processes will print their respective "Parent" and "Child" messages indefinitely.
+    Both processes will run concurrently, each displaying their process ID in an alternating manner.
+
+b) Terminate the child process:
+
+    To terminate the child process, press Ctrl+C to interrupt it. After termination, the parent process will continue printing its message until you manually terminate it. You'll observe the child process exits, and the parent keeps running.
+
+c) Terminate the parent process:
+
+    If you terminate the parent process, you’ll see the child process continues running. The parent process is terminated, but the child process doesn't stop until it is explicitly killed.
+
+d) Modify the program so the parent waits for the child:  
+    Here’s the modified code where the parent waits for the child to finish using wait().
+     
+    After modification:
+    The parent prints its message once, waits for the child process to exit, and then displays that the child process has terminated. 
+    The child continues running.
+
+e) Terminate the child process and trace:
+
+    When the child is terminated, the parent will wait for the termination using wait(), and the state will show the parent process continuing.
